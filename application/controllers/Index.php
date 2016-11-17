@@ -5,46 +5,28 @@
  * @desc 默认控制器
  * @see http://www.php.net/manual/en/class.yaf-controller-abstract.php
  */
-class IndexController extends Yaf_Controller_Abstract {
+class IndexController extends Abstracts{
 
-	/** 
+	/**
      * 默认动作
      * Yaf支持直接把Yaf_Request_Abstract::getParam()得到的同名参数作为Action的形参
      * 对于如下的例子, 当访问http://yourhost/Sample/index/index/index/name/root 的时候, 你就会发现不同
      */
 	public function indexAction($name = "Stranger") {
 		//1. fetch query
-		$get = $this->getRequest()->getQuery("get", "default value");
+		//$get = $this->getRequest()->getQuery("get", "default value");
 
 		//2. fetch model
 		$model = new SampleModel();
-
+		$content = $model->selectSample();
 		//3. assign
-		$this->getView()->assign("content", $model->selectSample());
-		$this->getView()->assign("name", $name);
+		$this->assign(array("content"=> $content));
+		$this->assign(array("name"=> $name));
 
 		//4. render by Yaf, 如果这里返回FALSE, Yaf将不会调用自动视图引擎Render模板
-        return TRUE;
-	}
-	
-	public function showAction() {
-		//http://localhsot/index/show
-		$model = new ArticleModel();
-		//$model -> selectArticle();
-
-		$model ->insertArticle();
-		//$model ->updateArticle();
-		//$model ->deleteArticle();
-		return false;
+		return TRUE;
 	}
 
 
-	public function usernameAction(){
 
-		$u_model = new UsersModel();
-
-		$u_model->insertUsers();
-		return false;
-
-	}
 }

@@ -6,9 +6,8 @@
 
 */
 use \Illuminate\Database\Capsule\Manager as Capsule; // 原始定义
-use \Illuminate\Database\Capsule\Manager as BD;  //Laravel   Builder 方式
-//https://laravel.com/api/5.1/Illuminate/Database/Eloquent/Builder.html
-use \Illuminate\Database\Eloquent\Model as Model;
+use \Illuminate\Database\Capsule\Manager as BD;  //Laravel   Builder 方式  https://laravel.com/api/5.1/Illuminate/Database/Eloquent/Builder.html
+use \Illuminate\Database\Eloquent\Model as Model;  //基础Model
 
 class ArticleModel extends Model
 {
@@ -25,7 +24,7 @@ class ArticleModel extends Model
     var_dump($sql);
   }
 
-  //插入数据
+  //插入数据  使用命名空间
   public function insertArticle() {
 
     $users_id = BD::table('user')->insert(['email' => 'Flight10@qq.com']);

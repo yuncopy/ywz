@@ -14,7 +14,9 @@ use \Illuminate\Container\Container;
 
 
 class Bootstrap extends Yaf_Bootstrap_Abstract{
-	protected $config;
+
+	protected $config;  //定义配置文件
+
     public function _initConfig() {
 		//把配置保存起来
 		$arrConfig = Yaf_Application::app()->getConfig();
@@ -49,27 +51,23 @@ class Bootstrap extends Yaf_Bootstrap_Abstract{
 
 		// Eloquent ORM
 		$capsule = new Capsule;
+		$database = $this->config['database']['master'];
 		$capsule->addConnection([
 			'driver'    => 'mysql',
-			'host'      => '192.168.1.137',
-			'database'  => 'sample',
-			'username'  => 'root',
-			'password'  => '111111',
+			'host'      => $database['host'],
+			'database'  => $database['database'],
+			'username'  => $database['username'],
+			'password'  => $database['password'],
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
-			'prefix'    => '',
+			'prefix'    => $database['prefix'],
 		]);
-
 		$capsule->setEventDispatcher(new Dispatcher(new Container));
 		// Make this Capsule instance available globally via static methods... (optional)
 		$capsule->setAsGlobal();
-
 		// Setup the Eloquent ORM... (optional; unless you've used setEventDispatcher())
 		$capsule->bootEloquent();
-
 	}
-
-
 
 
 
