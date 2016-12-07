@@ -325,5 +325,54 @@
             "orm",
             "sql"
         ]
+    },
+    {
+        "name": "owasp/phprbac",
+        "version": "2.0.0",
+        "version_normalized": "2.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/OWASP/rbac.git",
+            "reference": "1af904f69dcfc61f1a27c90fe8de2bfd574c1a71"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/OWASP/rbac/zipball/1af904f69dcfc61f1a27c90fe8de2bfd574c1a71",
+            "reference": "1af904f69dcfc61f1a27c90fe8de2bfd574c1a71",
+            "shasum": ""
+        },
+        "time": "2014-03-14T13:39:52+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "PhpRbac": "PhpRbac/src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "CC-BY-SA-3.0"
+        ],
+        "authors": [
+            {
+                "name": "AbiusX",
+                "email": "me@abiusx.com",
+                "homepage": "http://abiusx.com/",
+                "role": "Lead Developer"
+            },
+            {
+                "name": "Jesse Burns",
+                "email": "jesse.burns@alliancecms.com",
+                "homepage": "http://www.jbwebware.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "PHP-RBAC is the de-facto authorization library for PHP. It provides developers with NIST Level 2 Standard Role Based Access Control and more, in the fastest implementation yet.",
+        "homepage": "http://phprbac.net/",
+        "keywords": [
+            "owasp",
+            "rbac",
+            "security"
+        ]
     }
 ]

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b3f46cc5aaf35ab7ec7e7f8a4a9721e",
+    "content-hash": "3c7e99707c249e6683761703aa2574b9",
     "packages": [
         {
             "name": "illuminate/container",
@@ -261,6 +261,53 @@
                 "time"
             ],
             "time": "2015-11-04T20:07:17+00:00"
+        },
+        {
+            "name": "owasp/phprbac",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/OWASP/rbac.git",
+                "reference": "1af904f69dcfc61f1a27c90fe8de2bfd574c1a71"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/OWASP/rbac/zipball/1af904f69dcfc61f1a27c90fe8de2bfd574c1a71",
+                "reference": "1af904f69dcfc61f1a27c90fe8de2bfd574c1a71",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "PhpRbac": "PhpRbac/src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "CC-BY-SA-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "AbiusX",
+                    "email": "me@abiusx.com",
+                    "homepage": "http://abiusx.com/",
+                    "role": "Lead Developer"
+                },
+                {
+                    "name": "Jesse Burns",
+                    "email": "jesse.burns@alliancecms.com",
+                    "homepage": "http://www.jbwebware.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP-RBAC is the de-facto authorization library for PHP. It provides developers with NIST Level 2 Standard Role Based Access Control and more, in the fastest implementation yet.",
+            "homepage": "http://phprbac.net/",
+            "keywords": [
+                "owasp",
+                "rbac",
+                "security"
+            ],
+            "time": "2014-03-14T13:39:52+00:00"
         },
         {
             "name": "symfony/translation",

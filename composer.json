@@ -2,7 +2,8 @@
 
 	"require": {
 
-		"illuminate/database": "*"
+		"illuminate/database": "*",
+		"owasp/phprbac": "^2.0"
 
 	}
 

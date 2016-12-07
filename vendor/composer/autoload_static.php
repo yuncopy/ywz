@@ -32,6 +32,13 @@ class ComposerStaticInit561bcb8ca55e58ac511e5b9e2c2e7dcf
                 0 => __DIR__ . '/..' . '/symfony/translation',
             ),
         ),
+        'P' => 
+        array (
+            'PhpRbac' => 
+            array (
+                0 => __DIR__ . '/..' . '/owasp/phprbac/PhpRbac/src',
+            ),
+        ),
         'I' => 
         array (
             'Illuminate\\Support' => 
